@@ -3,7 +3,7 @@ import Navbar from './Main/Navbar';
 import Footer from './Main/Footer';
 import { github_username, github_api_key } from '../../../config.json';
 import { Helmet } from 'react-helmet'
-// lourity
+// Blodex
 const Home = () => {
   const [repositories, setRepositories] = useState([]);
 
@@ -34,16 +34,16 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Lourity - Full Stack Geliştirici</title>
+        <title>Blodex - Full Stack Geliştirici</title>
         <meta name="description"
-          content="Web tabanlı uygulamalar geliştiriyor ve Discord botları ile ilgileniyorum. Portföyüm ve becerilerim için URL lourity adresini ziyaret edin." />
+          content="Web tabanlı uygulamalar geliştiriyor ve Discord botları ile ilgileniyorum. Portföyüm ve becerilerim için URL Blodex adresini ziyaret edin." />
         <meta property="og:image" content="/logo.png" />
         <meta name="theme-color" content="#0ea5e9" />
       </Helmet>
       <Navbar />
       <div className='flex justify-center py-48 text-center'>
         <div>
-          <h1 className='font-bold text-4xl sm:text-6xl'>Merhaba Ben <span className='text-sky-500 underline'>Lourity</span></h1>
+          <h1 className='font-bold text-4xl sm:text-6xl'>Merhaba Ben <span className='text-sky-500 underline'>Blodex</span></h1>
           <p className='text-gray-400 text-lg sm:text-xl mt-2 p-1'>Full-Stack geliştiriciyim. Sakarya da yaşıyorum.<br />16 yaşındayım.</p>
         </div>
       </div>
@@ -55,9 +55,9 @@ const Home = () => {
         </div>
 
         <div className='gap-4 p-4 sm:py-8 sm:px-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4'>
-          {repositories.length > 0 ? (
+          {repositories.length > 0 ? 
             repositories.sort((a, b) => b.stargazers_count - a.stargazers_count).map((repositorie) => (
-              repositorie.name !== 'lourityy' && (
+              repositorie.name !== 'Blodex' && (
                 <div key={repositorie.id} className='duration-300 rounded-md bg-mainalt-black ring-1 ring-white/5 hover:ring-sky-500 hover:bg-mainhv-black cursor-default p-3'>
                   <a rel='nofollow' href={repositorie.html_url} target='_blank'>
                     <div>
